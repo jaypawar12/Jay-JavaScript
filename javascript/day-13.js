@@ -1,4 +1,4 @@
-// Higher Order Method / Function.
+// Higher Order Method / Function in Array.
 
 // 1. Filter :- The filter() method "creates a new array filled with elements that pass a test provided by a function." 
 // - The filter() method does not execute the function for empty elements. 
