@@ -1,5 +1,5 @@
-let num1 = +prompt("Enter a Num1");
-let num2 = +prompt("Enter a Num2");
+let num1 = 10;
+let num2 = 10;
 document.getElementById("num1-el").textContent = num1
 document.getElementById("num2-el").textContent = num2
 let sumEl = document.getElementById("sum-el")
