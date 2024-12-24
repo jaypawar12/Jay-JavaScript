@@ -6,11 +6,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-/* h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 .container {
     position: relative;
     width: 800px;
