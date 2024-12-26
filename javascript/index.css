@@ -74,6 +74,13 @@ body {
     cursor: pointer;
 }
 
+.clear{
+    background-color: red;
+}
+.opr{
+    background-color: aqua;
+}
+
 .equal {
     width: 180px;
     height: 85px;
