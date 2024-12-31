@@ -5,52 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+            display: none; 
+            margin-top: 5px; 
+        }
+
+        span.showError {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <form id="registion">
-        <div>
-            <label>First Name :</label>
-            <input type="text" id="fname" placeholder="First Name">
-            <br>
-            <br>
-            <label>Last Name :</label>
-            <input type="text" id="lname" placeholder="Last Name">
-            <br>
-            <br>
-            <label>Email :</label>
-            <input type="email" id="email" placeholder="Email">
-            <br>
-            <br>
-            <label>Password :</label>
-            <input type="password" id="pass" placeholder="Password">
-            <br>
-            <br>
-            <label>Gender :</label>
-            <input type="radio" name="gender" id="male">male
-            <input type="radio" name="gender" id="female">female
-            <br>
-            <br>
-            <label>Hobbies :</label>
-            <select name="hobby" id="hobby">
-                <option hidden>Select Your Hobbies</option>
-                <option value="sport">Playing Sports</option>
-                <option value="Traveling">Traveling</option>
-                <option value="Gaming">Gaming</option>
-            </select>
-            <br>
-            <br>
-            <label>Date :</label>
-            <input type="date" id="date" placeholder="Password">
-            <br>
-            <br>
-            <button type="submit">Registion</button>
-        </div>
-    </form>
+    <center>
+        <form id="registration">
+            <div>
+                <label>First Name :</label>
+                <input type="text" id="fname" placeholder="First Name">
+                <span id="fnameErr"></span>
+                <br>
+                <br>
+                <label>Last Name :</label>
+                <input type="text" id="lname" placeholder="Last Name">
+                <span id="lnameErr"></span>
+                <br>
+                <br>
+                <label>Email :</label>
+                <input type="email" id="email" placeholder="Email">
+                <span id="emailErr"></span>
+                <br>
+                <br>
+                <label>Password :</label>
+                <input type="password" id="pass" placeholder="Password">
+                <span id="passErr"></span>
+                <br>
+                <br>
+                <label>Gender :</label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+                <span id="genderErr"></span>
+                <br>
+                <br>
+                <label>Hobbies :</label>
+                <select name="hobby" id="hobby">
+                    <option hidden>Select Your Hobbies</option>
+                    <option value="sport">Playing Sports</option>
+                    <option value="Traveling">Traveling</option>
+                    <option value="Gaming">Gaming</option>
+                </select>
+                <span id="hobbyErr"></span>
+                <br>
+                <br>
+                <label>Date :</label>
+                <input type="date" id="date" placeholder="Password">
+                <span id="dateErr"></span>
+                <br>
+                <br>
+                <button type="submit">Registration</button>
+            </div>
+        </form>
+    </center>
     <script src="form.js"></script>
 </body>
 
 </html>
-
-
-
