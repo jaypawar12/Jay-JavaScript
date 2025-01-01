@@ -4,69 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validation</title>
     <style>
-        span {
+        .error {
             color: red;
-            font-size: 12px;
-            display: none; 
-            margin-top: 5px; 
-        }
-
-        span.showError {
-            display: block;
         }
     </style>
 </head>
 
 <body>
+
     <center>
+        <h2>Registration Form</h2>
         <form id="registration">
-            <div>
-                <label>First Name :</label>
-                <input type="text" id="fname" placeholder="First Name">
-                <span id="fnameErr"></span>
-                <br>
-                <br>
-                <label>Last Name :</label>
-                <input type="text" id="lname" placeholder="Last Name">
-                <span id="lnameErr"></span>
-                <br>
-                <br>
-                <label>Email :</label>
-                <input type="email" id="email" placeholder="Email">
-                <span id="emailErr"></span>
-                <br>
-                <br>
-                <label>Password :</label>
-                <input type="password" id="pass" placeholder="Password">
-                <span id="passErr"></span>
-                <br>
-                <br>
-                <label>Gender :</label>
-                <input type="radio" name="gender" value="male"> Male
-                <input type="radio" name="gender" value="female"> Female
-                <input type="radio" name="gender" value="other"> Other
-                <span id="genderErr"></span>
-                <br>
-                <br>
-                <label>Hobbies :</label>
-                <select name="hobby" id="hobby">
-                    <option hidden>Select Your Hobbies</option>
-                    <option value="sport">Playing Sports</option>
-                    <option value="Traveling">Traveling</option>
-                    <option value="Gaming">Gaming</option>
-                </select>
-                <span id="hobbyErr"></span>
-                <br>
-                <br>
-                <label>Date :</label>
-                <input type="date" id="date" placeholder="Password">
-                <span id="dateErr"></span>
-                <br>
-                <br>
-                <button type="submit">Registration</button>
-            </div>
+            <!-- First Name -->
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname">
+            <div id="fnameErr" class="error"></div><br><br>
+
+            <!-- Last Name -->
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <div id="lnameErr" class="error"></div><br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div id="emailErr" class="error"></div><br><br>
+
+            <!-- Password -->
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass">
+            <div id="passErr" class="error"></div><br><br>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <div id="genderErr" class="error"></div><br><br>
+
+            <!-- Hobby -->
+            <label for="hobby">Hobby:</label>
+            <select id="hobby" name="hobby">
+                <option hidden>Select Hobby</option>
+                <option value="reading">Gaming</option>
+                <option value="sports">Playing Sports</option>
+                <option value="traveling">Traveling</option>
+            </select>
+            <div id="hobbyErr" class="error"></div><br><br>
+
+            <!-- Date -->
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <div id="dateErr" class="error"></div><br><br>
+
+            <button type="submit">Submit</button>
         </form>
     </center>
     <script src="form.js"></script>
