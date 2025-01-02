@@ -46,39 +46,3 @@ class Person {
 
 let name = new Person("Jay.!");
 console.log(name.introduce());
-
-// class FullName extends Person {
-//     constructor(name, jp) {
-//         super(name); 
-//         this.fullName = jp;
-//     }
-
-//     Name() {
-//         return this.name + this.fullName; 
-//     }
-// }
-
-// let fullname = new FullName("Jay ", "Ashokbhai Pawar");
-// console.log(fullname.Name());
-
-class Car {
-    constructor(brand) {
-        this.carname = brand;
-    }
-    present() {
-        return 'I have a ' + this.carname;
-    }
-}
-
-class Model extends Car {
-    constructor(brand, mod) {
-        super(brand);
-        this.model = mod;
-    }
-    show() {
-        return this.present() + ', it is a ' + this.model;
-    }
-}
-
-let mycar = new Model("Ford", "Mustang");
-console.log(mycar.show());
