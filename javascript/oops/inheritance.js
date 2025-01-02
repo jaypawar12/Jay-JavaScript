@@ -214,7 +214,7 @@ class child2 extends child1 {
         this.child2 = child2
     }
     secondChild() {
-        console.log(`the Second Child Name ${this.child2}...!`)
+        console.log(`The Second Child Name ${this.child2}...!`)
     }
 }
 class child3 extends child2 {
@@ -226,7 +226,7 @@ class child3 extends child2 {
         this.child3 = child3
     }
     thirdChild() {
-        console.log(`the Third Child  Name ${this.child3}...!`)
+        console.log(`The Third Child  Name ${this.child3}...!`)
     }
 }
 
