@@ -1,69 +1,37 @@
-let slider = document.querySelector(".slider");
-let prev = document.querySelector(".prev");
-let next = document.querySelector(".next");
-
+const slider = document.querySelector(".slider");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
 const images = document.querySelectorAll(".image");
-
-let slideNumber = 1;
-let length = images.length;
-
 const bottom = document.querySelector('.bottom');
+let slideNumber = 1, length = images.length;
 
-for (let i = 0; i < length; i++) {
-    const div = document.createElement('div');
-    div.className = 'nav';
-    bottom.appendChild(div);
-}
-
+images.forEach(() => bottom.innerHTML += '<div class="nav"></div>');
 const navs = document.querySelectorAll('.nav');
 navs[0].classList.add('active');
 
-const resetNavs = () => {
-    navs.forEach((nav) => {
-        nav.classList.remove('active');
-    });
-};
+const updateSlider = () => slider.style.transform = `translateX(-${(slideNumber - 1) * 800}px)`;
+const updateNav = () => navs.forEach(nav => nav.classList.remove('active')) & navs[slideNumber - 1].classList.add('active');
 
-navs.forEach((nav, i) => {
-    nav.addEventListener("click", () => {
-        resetNavs();
-        slider.style.transform = `translateX(-${i * 800}px)`;
-        slideNumber = i + 1;
-        nav.classList.add('active');
-    });
-});
-
-const changeActiveNav = () => {
-    resetNavs();
-    navs[slideNumber - 1].classList.add('active');
-};
-
-const nextSlide = () => {
-    slider.style.transform = `translateX(-${slideNumber * 800}px)`;
-    slideNumber++;
-};
-
-const prevSlide = () => {
-    slideNumber--;
-    slider.style.transform = `translateX(-${(slideNumber - 1) * 800}px)`;
-};
-
-const getFirstSlide = () => {
-    slider.style.transform = `translateX(0px)`;
-    slideNumber = 1;
-};
-
-const getLastSlide = () => {
-    slider.style.transform = `translateX(-${(length - 1) * 800}px)`;
-    slideNumber = length;
-};
+navs.forEach((nav, i) => nav.addEventListener("click", () => {
+    slideNumber = i + 1;
+    updateSlider();
+    updateNav();
+}));
 
 next.addEventListener("click", () => {
-    slideNumber < length ? nextSlide() : getFirstSlide();
-    changeActiveNav();
+    slideNumber = (slideNumber < length) ? slideNumber + 1 : 1;
+    updateSlider();
+    updateNav();
 });
 
 prev.addEventListener("click", () => {
-    slideNumber > 1 ? prevSlide() : getLastSlide();
-    changeActiveNav();
+    slideNumber = (slideNumber > 1) ? slideNumber - 1 : length;
+    updateSlider();
+    updateNav();
 });
+
+let autoSlideInterval = setInterval(() => {
+    slideNumber = (slideNumber % length) + 1;
+    updateSlider();
+    updateNav();
+}, 2000);
