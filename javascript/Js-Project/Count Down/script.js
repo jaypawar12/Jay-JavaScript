@@ -1,37 +1,39 @@
-const countdownText = document.getElementById('countdown-text');
-const day = document.getElementById('days');
-const hour = document.getElementById('hours');
-const minute = document.getElementById('minutes');
-const second = document.getElementById('seconds');
+let day = document.getElementById("days");
+let hour = document.getElementById("hours");
+let minute = document.getElementById("minutes");
+let second = document.getElementById("seconds");
+let countdownText = document.getElementById("countdown-text");
 
-document.getElementById('startButton').addEventListener('click', () => {
-  const inputDate = document.getElementById('countdownInput').value;
+document.getElementById("startButton").addEventListener("click", () => {
+  let inputDate = document.getElementById("countdownInput").value;
+
   if (!inputDate) {
-    return alert('Please select a date and time.');
+    alert("Please Select a Date and Time...")
   }
 
-  const targetDate = new Date(inputDate).getTime();
+  let targetDate = new Date(inputDate).getTime();
 
-  const updateCountdown = () => {
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
+  let updateCountdown = () => {
+    let now = new Date().getTime();
+    let timeLeft = targetDate - now;
 
     if (timeLeft <= 0) {
       clearInterval(interval);
-      countdownText.innerHTML = "Let's Enjoy The Party!";
+      countdownText.innerHTML = "The Event is Live!"; 
+      countdownText.style.color = "green"; 
+      countdownText.style.fontSize = "24px";
       return;
     }
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    let days = Math.floor(timeLeft / (24 * 60 * 60 * 1000));
+    let hours = Math.floor(timeLeft % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+    let minutes = Math.floor(timeLeft % (24 * 60 * 60 * 1000) / (60 * 1000));
+    let seconds = Math.floor(timeLeft % (24 * 60 * 60 * 1000) / (1000));
 
     day.innerHTML = days < 10 ? '0' + days : days;
     hour.innerHTML = hours < 10 ? '0' + hours : hours;
     minute.innerHTML = minutes < 10 ? '0' + minutes : minutes;
     second.innerHTML = seconds < 10 ? '0' + seconds : seconds;
-  };
-
-  const interval = setInterval(updateCountdown, 1000);
+  }
+  let interval = setInterval(updateCountdown, 1000);
 });
