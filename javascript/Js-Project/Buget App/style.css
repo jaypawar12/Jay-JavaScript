@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9eedff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input {
+    width: 100%;
+    display: block;
+    padding: 5px;
+    margin: 15px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3560ee;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.main-box {
+    width: 600px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.99);
+}
+
+.buget-box {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.amout-box,
+.expenses-box {
+    flex: 1;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.output-box {
+    background-color: #3560ee;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.output-box ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.expense-list {
+    background-color: white;
+    color: black;    
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.expense-list h3, .buget-box h4{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+}
+.expense-list h3::after, .buget-box h4::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #3560ee;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.list-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.list-container {
+    margin-top: 15px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.actions button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}

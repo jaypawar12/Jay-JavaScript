@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="fonts/remixicon.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>!--- BUDGET APP ---!</h1>
+            <div class="main-box">
+                <div class="buget-box">
+                    <div class="amout-box">
+                        <h4>Budget</h4>
+                        <input type="number" placeholder="Enter Total Amount" id="amout-num">
+                        <button id="amount">Set Budget</button>
+                    </div>
+                    <div class="expenses-box">
+                        <h4>Expenses</h4>
+                        <input type="text" id="prod-name" placeholder="Enter a Product">
+                        <input type="number" id="prod-cost" placeholder="Enter Cost of Product">
+                        <button id="expenses">Add Expense</button>
+                    </div>
+                </div>
+                <div class="output-box">
+                    <ul>
+                        <li>Total Budget</li>
+                        <li>Expenses</li>
+                        <li>Balance</li>
+                    </ul>
+                    <ul>
+                        <li id="display-amount">00</li>
+                        <li id="display-expenses">00</li>
+                        <li id="display-balance">00</li>
+                    </ul>
+                </div>
+                <div class="expense-list">
+                    <h3>Expense List</h3>
+                    <div class="list-container" id="list">
+                        <div class="list-title">
+                            <h4>Product Name</h4>
+                            <h4>Product Cost</h4>
+                            <h4>Edit & Delete</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
