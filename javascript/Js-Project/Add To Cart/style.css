@@ -14,7 +14,6 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Container */
 .container {
     width: 100%;
     max-width: 1320px;
@@ -57,7 +56,6 @@ li {
     text-align: center;
 }
 
-/* Column Sizes */
 .col-1 {
     width: 8.33%;
 }
@@ -110,7 +108,6 @@ li {
     height: 100%;
 }
 
-/* Header */
 header {
     height: 80px;
     background: linear-gradient(145deg, #3e4e88, #1a2a4d);
@@ -161,6 +158,22 @@ header .search-form i {
     transform: translateY(-50%);
 }
 
+header #form-add-cart {
+    cursor: pointer;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    border: none;
+    margin-left: 70px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+header #form-add-cart i {
+    margin-left: 5px;
+}
+
 header nav {
     display: flex;
     align-items: center;
@@ -197,19 +210,6 @@ header nav ul:first-child a::before {
     transition: all 0.2s ease;
 }
 
-header nav ul:first-child a::before {
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.2s ease;
-}
-
-
 header nav ul:first-child a:hover {
     color: red;
 }
@@ -234,7 +234,6 @@ nav ul:first-child li:first-child a:hover::before {
     border: none;
 }
 
-
 header nav ul:last-child {
     padding: 12px 15px;
     background-color: #10396a;
@@ -242,9 +241,6 @@ header nav ul:last-child {
     border-radius: 5px;
     position: relative;
     transition: all 0.3s ease;
-}
-
-header nav ul:last-child {
     transform: scale(1.1);
 }
 
@@ -263,9 +259,21 @@ header nav ul:last-child::before {
     padding: 1px;
 }
 
-
 header nav ul:last-child li:last-child span {
     font-size: 18px;
+}
+
+.total-bill {
+    margin: 15px;
+}
+
+.total-bill p:first-child {
+    color: #d88e00;
+    font-size: 25px;
+}
+
+.total-bill p:nth-child(2) {
+    font-size: 25px;
 }
 
 .cartTab {
@@ -318,30 +326,38 @@ header nav ul:last-child li:last-child span {
 }
 
 .cartTab .listCart .cart-item img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 8px;
 }
 
 .cartTab .listCart .cart-item .text-area {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
     color: #fff;
+    font-size: 13px;
 }
 
-.cartTab .listCart .cart-item .text-area p:first-child {
+.cartTab .listCart .cart-item .text-area p {
     font-weight: 700;
-    margin: 0 15px;
-    font-size: 15px;
+    margin: 0 12px;
 }
 
-.cartTab .listCart .cart-item .text-area p:nth-child(2) {
+.cartTab .listCart .cart-item .inc-btn+.text-area p {
     font-weight: 600;
     color: #ff9f00;
-    font-size: 15px;
+}
+
+.cartTab .listCart .cart-item .inc-dec-num {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.cartTab .listCart .cart-item .inc-btn,
+.cartTab .listCart .cart-item .dec-btn {
+    padding: 0px 5px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
 }
 
 .cartTab .listCart .cart-item .btn {
@@ -351,24 +367,28 @@ header nav ul:last-child li:last-child span {
 }
 
 .cartTab .listCart .cart-item .btn button {
-    width: 100%;
+    width: 50%;
     padding: 10px;
-    background-color: #d88e00;
+    margin: 0 10px;
+    background-color: #ff7f00;
     border: none;
     border-radius: 5px;
-    color: #fff;
+    color: black;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.2s ease;
 }
 
 .cartTab .listCart .cart-item .btn button:hover {
     transform: scale(1.05);
-    background-color: #ff7f00;
 }
 
 .cartTab .listCart .cart-item .btn button:active {
     transform: scale(0.95);
+}
+
+.cartTab .listCart .cart-item .btn .buy-now {
+    background-color: white;
 }
 
 .cartTab .listCart .cart-item .list {
@@ -412,14 +432,11 @@ header nav ul:last-child li:last-child span {
     background-color: #353432;
 }
 
-/* Cart Section */
 .carts h3 {
     font-size: 26px;
     font-weight: 700;
     color: #10396a;
     margin: 50px 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     display: inline-block;
     position: relative;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -484,19 +501,19 @@ header nav ul:last-child li:last-child span {
 .carts .cart-item .btn {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .carts .cart-item .btn button {
     width: 100%;
-    padding: 10px 15px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
     color: white;
     background-color: black;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     transition: all 0.2s ease;
 }
@@ -512,4 +529,94 @@ header nav ul:last-child li:last-child span {
 .carts .cart-item .btn button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.carts .cart-item .btn .edit-cart {
+    background-color: #10396a;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #005bb5;
 }
