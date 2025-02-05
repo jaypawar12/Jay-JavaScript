@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("https://img.freepik.com/free-vector/hand-drawn-weather-effects_23-2149105676.jpg?semt=ais_hybrid");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+    color: #fff;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.search-box i {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#weather-result {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+@keyframes mymove {
+    from {
+        top: -250px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.weather-card {
+    position: relative;
+    background: white;
+    color: black;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    animation: mymove 1s ease-in-out forwards;
+}
+
+.weather-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.weather-card img {
+    width: 80px;
+}
+
+.weather-card .temperature {
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+}
+
+.weather-card p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+}
