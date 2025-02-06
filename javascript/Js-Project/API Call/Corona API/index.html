@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 India State-wise Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>COVID-19 India State-wise Stats</header>
+    <div class="container">
+        <input type="date" id="dateInput" placeholder="Select Date...">
+        <input type="text" id="searchInput" placeholder="Search State..." oninput="searchState()">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Confirmed Cases</th>
+                    <th>Recovered</th>
+                    <th>Deaths</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable"></tbody>
+        </table>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="cart" id="cart">
+        <h2 id="stateName"></h2>
+        <p><strong>Confirmed Cases:</strong> <span id="confirmedCases"></span></p>
+        <p><strong>Recovered:</strong> <span id="recovered"></span></p>
+        <p><strong>Deaths:</strong> <span id="deaths"></span></p>
+        <button class="close-btn" id="closeCart">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
