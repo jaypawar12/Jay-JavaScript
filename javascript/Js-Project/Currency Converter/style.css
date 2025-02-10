@@ -44,6 +44,22 @@ body {
     flex-direction: column;
     margin-bottom: 28px;
 }
+
+.currency-title img {
+    animation: spin 4s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 p {
     font-weight: 700;
     font-size: 18px;
@@ -62,7 +78,8 @@ input {
     outline: none;
 }
 
-#dropdown1,#dropdown2 {
+#dropdown1,
+#dropdown2 {
     background-color: #02002c;
     color: white;
     width: auto;
@@ -74,11 +91,13 @@ input {
     transition: background-color 0.3s ease-in-out;
 }
 
-#dropdown1:hover, #dropdown2:hover {
+#dropdown1:hover,
+#dropdown2:hover {
     background-color: #5a48d0;
 }
 
-#dropdown1 option, #dropdown2 option{
+#dropdown1 option,
+#dropdown2 option {
     background-color: #02002c;
     color: white;
 }
@@ -88,11 +107,12 @@ select option {
     color: #02002c;
 }
 
-.btn{
+.btn {
     margin-top: 10px;
 }
 
-.convert, .result{
+.convert,
+.result {
     width: 100%;
     background-color: #9873fe;
     color: white;
@@ -110,7 +130,7 @@ select option {
     background-color: #5a48d0;
 }
 
-.result{
+.result {
     background-color: #e5dbff;
     color: #02002c;
 }

@@ -22,3 +22,4 @@ convertBtn.addEventListener('click', () => {
 
     result.textContent = `${(amount * exchangeRates[fromCurrency][toCurrency]).toFixed(2)} ${toCurrency.toUpperCase()}`;
 });
+
